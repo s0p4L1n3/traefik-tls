@@ -49,22 +49,19 @@ tls:
    # default:
     #  minVersion: VersionTLS11
 
-  certificates:
-    - certFile: /certs/drawio.lab.lan-crt.pem
-      keyFile: /certs/drawio.lab.lan-key.pem
-    - certFile: /certs/gitlab.lab.lan-crt.pem
-      keyFile: /certs/gitlab.lab.lan-key.pem
-    - certFile: /certs/netbox.lab.lan-crt.pem
-      keyFile: /certs/netbox.lab.lan-key.pem
-    - certFile: /certs/passbolt.lab.lan-crt.pem
-      keyFile: /certs/passbolt.lab.lan-key.pem
-    - certFile: /certs/glpi.lab.lan-crt.pem
-      keyFile: /certs/glpi.lab.lan-key.pem
-    - certFile: /certs/elk.lab.lan-crt.pem
-      keyFile: /certs/elk.lab.lan-key.pem
-
-
-
+  #certificates:
+    #- certFile: /certs/drawio.lab.lan-crt.pem
+    #  keyFile: /certs/drawio.lab.lan-key.pem
+    #- certFile: /certs/gitlab.lab.lan-crt.pem
+    #  keyFile: /certs/gitlab.lab.lan-key.pem
+    #- certFile: /certs/netbox.lab.lan-crt.pem
+    # keyFile: /certs/netbox.lab.lan-key.pem
+    #- certFile: /certs/passbolt.lab.lan-crt.pem
+    #  keyFile: /certs/passbolt.lab.lan-key.pem
+    #- certFile: /certs/glpi.lab.lan-crt.pem
+    #  keyFile: /certs/glpi.lab.lan-key.pem
+    #- certFile: /certs/elk.lab.lan-crt.pem
+    #  keyFile: /certs/elk.lab.lan-key.pem
 
 
 # when troubleshooting certs, enable this so traefik doesn't use 
