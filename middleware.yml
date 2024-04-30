@@ -1,0 +1,15 @@
+http:
+  middlewares:
+    # ici on définit les middlewares qui peuvent ensuite être utilisés dans des labels
+    # dans les docker-compose.yml des projets.
+
+    securityHeaders:
+      # ce middleware permet de modifier des headers HTTP de sécurité
+      headers:
+        customFrameOptionsValue: "SAMEORIGIN"
+        sslRedirect: true
+        framedeny: true
+        sslredirect: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 15552000
