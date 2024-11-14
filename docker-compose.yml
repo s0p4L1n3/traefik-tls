@@ -1,7 +1,10 @@
+networks:
+  traefik-tls:
+    external: true
+
 services:
-  
   traefik:
-   image: traefik:2.11.2
+   image: traefik:3.2.0
    healthcheck:
      test: 
        - CMD
@@ -17,9 +20,6 @@ services:
      - ./traefik.yaml:/etc/traefik/traefik.yaml
      - ./certs/:/certs/
      - /var/run/docker.sock:/var/run/docker.sock
+     #- ./config/traefik:/config:ro
    networks:
-      - traefiknet
-
-networks:
-  traefiknet:
-    driver: bridge
+      - traefik-tls

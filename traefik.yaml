@@ -1,4 +1,6 @@
 ## STATIC CONFIG (restart traefik to update)
+core:
+  defaultRuleSyntax: v3
 
 # shows you a log msg if a newer image tag can be used
 global:
@@ -45,9 +47,12 @@ entryPoints:
 ## DYNAMIC CONFIG
 
 tls:
-  #options:
-   # default:
-    #  minVersion: VersionTLS11
+  certificates:
+    - certFile: /certs/graylog.sopaline.lan.crt
+      keyFile: /certs/graylog.sopaline.lan.key
+  options:
+    default:
+      minVersion: VersionTLS12
 
   #certificates:
     #- certFile: /certs/drawio.lab.lan-crt.pem

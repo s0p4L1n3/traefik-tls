@@ -2,6 +2,7 @@
 Configuration to use traefik as TLS Reverse Proxy for multiple container app
 
 1. Clone this repo
+2. Create a external docker network: `docker network create -d bridge traefik-tls`
 2. `docker compose up -d`
 3. Check the name of the created network bridge: `docker network ls`, usually its: _networkname-folderprojectname_ (in my usecase _traefik-global_traefiknet_)
 4. Prepare the private key/certificate pair for your target container app (use OpenSSL or your Private PKI)
